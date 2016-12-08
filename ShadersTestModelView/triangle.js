@@ -65,7 +65,7 @@ window.onload = function init() {
         type = true;
        dFunction = torusDrawWireFrame;
 	
-   	myAudio = new Audio('evangelion.mp3'); 
+   	myAudio = new Audio('Evangelion Opening.mp3'); 
 	myAudio.addEventListener('ended', function() {
     	this.currentTime = 0;
    	 this.play();
