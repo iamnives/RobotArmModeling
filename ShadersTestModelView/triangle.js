@@ -32,7 +32,7 @@ var autoRotateZ;
 var stepsX;
 var stepsY;
 var stepsZ;
-
+var myAudio;
 var type;
 var l;
 var alfa;
@@ -64,7 +64,14 @@ window.onload = function init() {
         transl = -3;
         type = true;
        dFunction = torusDrawWireFrame;
-   
+	
+   	myAudio = new Audio('evangelion.mp3'); 
+	myAudio.addEventListener('ended', function() {
+    	this.currentTime = 0;
+   	 this.play();
+	}, false);
+	myAudio.play();
+	
     mModelView = obl(l, alpha);
     mProjection = ortho(-2,2,-2,2,10,-10);
 	mNormals = transpose(inverse(mModelView));
